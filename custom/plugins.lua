@@ -51,7 +51,7 @@ local plugins = {
   {
     "sveltejs/language-tools",
     config = function()
-      require('plugins.configs.lspconfig').svelte.setup()
+      require("plugins.configs.lspconfig").svelte.setup()
     end,
   }
 
