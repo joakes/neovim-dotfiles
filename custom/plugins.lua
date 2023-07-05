@@ -48,13 +48,6 @@ local plugins = {
     end,
   },
 
-  {
-    "sveltejs/language-tools",
-    config = function()
-      require("plugins.configs.lspconfig").svelte.setup()
-    end,
-  }
-
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

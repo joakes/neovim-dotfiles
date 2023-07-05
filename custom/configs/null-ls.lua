@@ -18,11 +18,18 @@ local sources = {
 	-- prettierd because it's fast
 	b.formatting.prettierd,
 
+    -- prettier just for svelete files
+	b.formatting.prettier.with({
+        filetypes = {
+			"svelte",
+		},
+	}),
+
 	-- cpp
 	b.formatting.clang_format,
 }
 
--- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save 
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	debug = true,
